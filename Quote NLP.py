@@ -21,7 +21,7 @@ embed       = 64
 rnn_unit    = 256
 batch_size  = 256
 buffer_size = 10000
-Epochs      = 75
+Epochs      = 30
 TOP_K       = 3
 
 
