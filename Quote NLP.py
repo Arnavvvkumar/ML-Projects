@@ -52,7 +52,6 @@ tokenizer.fit_on_texts([full_text])
 all_ids = tokenizer.texts_to_sequences([full_text])[0]
 
 vocab_size = len(tokenizer.word_index) + 1
-print(f"→ vocab size: {vocab_size}")
 
 inputs, targets = [], []
 for i in range(seq_len, len(all_ids)):
@@ -63,7 +62,7 @@ targets = np.array(targets)
 
 inputs  = np.clip(inputs,  0, vocab_size-1)
 targets = np.clip(targets, 0, vocab_size-1)
-print(f"post-clip max input: {inputs.max()}, max target: {targets.max()}")
+
 
 dataset = (
     tf.data.Dataset
